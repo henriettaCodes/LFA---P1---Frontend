@@ -1,0 +1,103 @@
+{
+    "artist": {
+      "name": "Leonardo da Vinci",
+      "birthDate": "1452-04-15",
+      "deathDate": "1519-05-02",
+      "nationality": "Italian",
+      "artMovement": "Renaissance",
+      "famousWorks": [
+        {
+          "title": "Mona Lisa",
+          "year": 1503,
+          "medium": "Oil on wood"
+        },
+        {
+          "title": "The Last Supper",
+          "year": 1498,
+          "medium": "Fresco"
+        },
+        {
+          "title": "Vitruvian Man",
+          "year": 1490,
+          "medium": "Pen and ink"
+        }
+      ],
+      "bio": "Leonardo da Vinci was an Italian polymath of the Renaissance whose areas of interest included invention, drawing, painting, sculpture, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography. He has been variously called the father of palaeontology, ichnology, and architecture, and is widely considered one of the greatest painters of all time."
+    },
+    "artist": {
+      "name": "Pablo Picasso",
+      "birthDate": "1881-10-25",
+      "deathDate": "1973-04-08",
+      "nationality": "Spanish",
+      "artMovement": "Cubism",
+      "famousWorks": [
+        {
+          "title": "Guernica",
+          "year": 1937,
+          "medium": "Oil on canvas"
+        },
+        {
+          "title": "Les Demoiselles d'Avignon",
+          "year": 1907,
+          "medium": "Oil on canvas"
+        },
+        {
+          "title": "The Weeping Woman",
+          "year": 1937,
+          "medium": "Oil on canvas"
+        }
+      ],
+      "bio": "Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, and stage designer who spent most of his adult life in France. He is known for co-founding the Cubist movement, the invention of constructed sculpture, the co-invention of collage, and for the wide variety of styles that he helped develop and explore."
+    },
+    "artist": {
+      "name": "Vincent van Gogh",
+      "birthDate": "1853-03-30",
+      "deathDate": "1890-07-29",
+      "nationality": "Dutch",
+      "artMovement": "Post-Impressionism",
+      "famousWorks": [
+        {
+          "title": "Starry Night",
+          "year": 1889,
+          "medium": "Oil on canvas"
+        },
+        {
+          "title": "Sunflowers",
+          "year": 1888,
+          "medium": "Oil on canvas"
+        },
+        {
+          "title": "The Bedroom",
+          "year": 1889,
+          "medium": "Oil on canvas"
+        }
+      ],
+      "bio": "Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade, he created about 2,100 artworks, including around 860 oil paintings, most of which date from the last two years of his life."
+    },
+    "artist": {
+      "name": "Andy Warhol",
+      "birthDate": "1928-08-06",
+      "deathDate": "1987-02-22",
+      "nationality": "American",
+      "artMovement": "Pop Art",
+      "famousWorks": [
+        {
+          "title": "Campbell's Soup Cans",
+          "year": 1962,
+          "medium": "Acrylic on canvas"
+        },
+        {
+          "title": "Marilyn Diptych",
+          "year": 1962,
+          "medium": "Acrylic on canvas"
+        },
+        {
+          "title": "Eight Elvises",
+          "year": 1963,
+          "medium": "Acrylic on canvas"
+        }
+      ],
+      "bio": "Andy Warhol was an American artist, director, and producer who was a leading figure in the visual art movement known as pop art. His works explore the relationship between artistic expression, culture, and advertisement that flourished in the 1960s."
+    }
+  }
+  
