@@ -19,7 +19,7 @@ body {
     line-height: normal;
     position: absolute;
     top: 0;
-    transform: rotate(2deg);
+    transform: rotate(-2deg);
   }
 
   .circle {
@@ -87,8 +87,11 @@ body {
 }
 
 .layout__next-button svg {
-  width: 2rem;
+  /* width: 2rem; */
   fill: #E1229A;
+  width: 120.447px;
+  height: 64px;
+  flex-shrink: 0;
 }
 
 .layout__next-button:hover {
