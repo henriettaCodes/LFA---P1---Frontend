@@ -4,6 +4,17 @@
 
 body {
     margin: 0;
+    letter-spacing: 0.075ch;
+}
+
+main {
+    /* Push up a tad because the painting captions hang down, 
+    so that the main content still looks centered vertically */
+    padding-bottom: 4rem;
+}
+
+p {
+    font-weight: 300;
 }
 
 img {
@@ -50,5 +61,23 @@ img {
     border: 1rem ridge rgb(117, 116, 139);
     width: 100%;
     height: 100%;
-    object-fit: cover ;
+    object-fit: cover;
+}
+
+.artist-bio-page__painting-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.artist-bio-page__painting-caption-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.artist-bio-page__painting-caption-date {
+    font-weight: 300;
 }
