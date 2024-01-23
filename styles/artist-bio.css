@@ -27,9 +27,41 @@ img {
     gap: 2rem;
 }
 
+.artist-bio-page__heading-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
 .artist-bio-page__heading-group h1,
 .artist-bio-page__heading-group p {
     margin: 0;
+}
+
+.artist-bio-page__heading-slant-box {
+    padding: 0.25rem 0.75rem;
+    background-color: #E1229A;
+    transform: rotate(2deg);
+}
+
+.artist-bio-page__year-info-slant-box {
+    padding: 0.5rem 0.75rem;
+    background-color: #86CAF2;
+    transform: rotate(2deg);
+}
+
+.artist-bio-page__heading-group h1 {
+    color: #edb621;
+    padding: 0;
+    margin: 0;
+    transform: rotate(-2deg);
+    letter-spacing: 0.15ch;
+}
+
+.artist-bio-page__heading-group p {
+    color: #E1229A;
+    transform: rotate(-2deg);
 }
 
 .artist-bio-page__main-bio-container {
@@ -39,6 +71,10 @@ img {
 
 .artist-bio-page__bio-portrait {
     max-width: 10rem;
+}
+
+.artist-bio-page__bio-portrait img {
+    border-radius: 1rem;
 }
 
 .artist-bio-page__bio-text-container {
