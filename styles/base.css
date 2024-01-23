@@ -1,0 +1,20 @@
+body {
+    color: #576088;
+    font-family: 'Londrina Solid', sans-serif;
+    background-color: #F6F6FF;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+
+  } 
+
+main {
+   max-width: 800px;
+   margin: 3rem;
+  }
+
+
+ h1 {
+    color: #7076D0;
+ }
