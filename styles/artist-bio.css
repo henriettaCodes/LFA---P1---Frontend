@@ -1,0 +1,35 @@
+img {
+    width: 100%;
+}
+
+.artist-bio-page__main-bio-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.artist-bio-page__bio-portrait {
+    max-width: 10rem;
+}
+
+/* .artist-bio-page__main-bio-container :nth-child(1) {
+    flex: 0 0 20%;
+} */
+
+
+.artist-bio-page__bio-text-container :nth-child(1) {
+    flex: 0 0 20%;
+}
+
+.artist-bio-page__paintings-image-container {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.artist-bio-page__paintings-image-container > * {
+    flex: 1 1 33.33%;
+}
+
+.artist-bio-page__paintings-image-container img {
+    width: 100%;
+}
