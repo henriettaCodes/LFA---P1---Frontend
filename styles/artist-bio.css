@@ -43,12 +43,12 @@ img {
 .artist-bio-page__paintings-image-container {
     display: flex;
     gap: 1rem;
-}
-
-.artist-bio-page__paintings-image-container > * {
-    flex: 1 1 33.33%;
+    height: 16rem;
 }
 
 .artist-bio-page__paintings-image-container img {
-    border: 0.5rem ridge #9d7e66;
+    border: 1rem ridge rgb(117, 116, 139);
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
 }
