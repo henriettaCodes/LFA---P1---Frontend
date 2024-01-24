@@ -1,20 +1,89 @@
 body {
-    color: #576088;
-    font-family: 'Londrina Solid', sans-serif;
-    background-color: #F6F6FF;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    height: 100vh;
+   color: #576088;
+   font-family: 'Londrina Solid', sans-serif;
+   background-color: #F6F6FF;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
 
-  } 
+}
 
 main {
    max-width: 800px;
    margin: 3rem;
-  }
+}
 
 
- h1 {
-    color: #7076D0;
- }
+h1 {
+   color: #7076D0;
+}
+
+
+/* Navigation buttons */
+
+.layout__home-button,
+.layout__next-button,
+.layout__back-button {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   font-size: 2rem;
+   text-decoration: none;
+}
+
+.layout__home-button {
+   top: 4rem;
+   left: 6rem;
+   color: #E2B22F;
+}
+
+.layout__next-button,
+.layout__back-button {
+   bottom: 4rem;
+   color: #E1229A;
+}
+
+.layout__next-button {
+   right: 6rem;
+}
+
+.layout__back-button {
+   left: 6rem;
+}
+
+.layout__home-button svg,
+.layout__next-button svg,
+.layout__back-button svg {
+   width: 2rem;
+}
+
+.layout__home-button svg {
+   fill: #E2B22F;
+}
+
+.layout__next-button svg,
+.layout__back-button svg {
+   fill: #E1229A;
+}
+
+.layout__home-button:hover,
+.layout__next-button:hover,
+.layout__back-button:hover {
+   color: #E2B22F;
+}
+
+.layout__home-button:hover svg,
+.layout__next-button:hover svg,
+.layout__back-button:hover svg {
+   fill: #E2B22F;
+}
+
+.layout__home-button:hover {
+   color: #E1229A;
+}
+
+.layout__home-button:hover svg {
+   fill: #E1229A;
+}
