@@ -24,7 +24,27 @@ main {
     position: absolute;
     align-items: center;
     top: 0;
-    margin-left: 33%;
+    padding-left: 27rem;
+    padding-left: 27rem;
+ }
+
+ h2 {
+    color: #616A93;
+    position: absolute;
+    top: 26%;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+   
+ }
+
+ p {
+   padding-left: 8rem;
+   padding-right: 18rem;
+ }
+ ol {
+    font-size: 35px;
  }
 
  .image-container {
@@ -44,8 +64,21 @@ main {
     margin-right: 20px;
  }
 
- .achievements_bg {
-    width: 750px;
+.achievements_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 columns */
+    grid-gap: 20px; /* spacing between images */
+    padding: 20px; 
+}
+
+.achievements_grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: add border-radius for a nicer look */
+  }
+
+  .achievements_bg {
+    width: 550px;
     height: 411px;
     background-color: #DAF0FE; 
     border-radius: 7%;
@@ -54,28 +87,6 @@ main {
     justify-content: center;
  }
 
-
-.achievements_imgs_container {
-    display: flex;
- }
-
-.A1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.rectangle_bg {
-    width: 135px;
-    height: 200px;
-    border-radius: 5%;
-    background-color: #86CAF2;
-    position: absolute;
-    top: 32%;
-    left: 33rem
-
-}
 
 .start-btn {
     position: absolute;
