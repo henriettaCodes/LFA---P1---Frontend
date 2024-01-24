@@ -1,10 +1,50 @@
 body {
-    color: #576088;
-    font-family: 'Londrina Solid', sans-serif;
-    background-color: #F6F6FF;
-    
-  } 
+   color: #576088;
+   font-family: 'Londrina Solid', sans-serif;
+   background-color: #F6F6FF;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
 
- h1 {
-    color: #7076D0;
- }
+}
+
+main {
+   max-width: 800px;
+   margin: 3rem;
+}
+
+
+h1 {
+   color: #7076D0;
+}
+
+
+/* Navigation buttons */
+
+.layout__home-button {
+   position: absolute;
+   top: 4rem;
+   left: 6rem;
+
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+
+   color: #E2B22F;
+   font-size: 2rem;
+   text-decoration: none;
+}
+
+.layout__home-button svg {
+   width: 2rem;
+   fill: #E2B22F;
+}
+
+.layout__home-button:hover {
+   color: #E1229A;
+}
+
+.layout__home-button:hover svg {
+   fill: #E1229A;
+}
