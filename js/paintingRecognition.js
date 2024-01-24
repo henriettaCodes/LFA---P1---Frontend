@@ -1,77 +1,42 @@
-// console.log('hello!')
-
 // Number of paintings visible on the page, that the user can choose between 
 const numberOfPaintings = 4;
 
-// console.log(window.location.search);
-// var currentUrl = window.location.href;
-
-// const artistName = window.location.search
-
 const queryParams = new URLSearchParams(window.location.search);
-const correctArtistDataName = queryParams.get('artist');
+const correctArtistDataName = queryParams.get('artist');  // Example: `website.com/painting-recognition?artist=pablo-picasso`
 
-// console.log(artistName)
+const endpointUrl = `https://lfa-project1-backend.onrender.com/painting-recognition?artist=${correctArtistDataName}`;
 
 // Gets the the data for all the images from the backend.
 // Data returned must include one painting for the correct artist,
 // and three incorrect paintings from three other artists. 
-function fetchData(correctArtistDataName) {
+const fetchData = async () => {
+    const response = await fetch(endpointUrl);
+    return await response.json();
+}
 
-    // Add a Fetch to the backend
+const displayMessage = (type) => {
+    const body = document.querySelector('body');
 
-    // Mock data 
-    const data = {
-        correctArtist: {
-            artistName: "Pablo Picasso",
-            dataName: 'pablo-picasso',
-            painting: {
-                title: "Girl before a Mirror",
-                date: '1932',
-                url: 'images/picasso/girl_before_a_mirror.jpg'
-            }
-
-        },
-        incorrectArtists:
-            [
-                {
-                    artistName: "Leonardo Da Vinci",
-                    dataName: 'da-vinci',
-                    painting: {
-                        title: "The Last Supper",
-                        date: '1495–1498',
-                        url: 'images/da-vinci/last_supper.jpg'
-                    }
-                },
-                {
-                    artistName: "Vincent van Gogh",
-                    dataName: 'van-gogh',
-                    painting: {
-                        title: "Cafe Terrace at Night",
-                        date: '1888',
-                        url: 'images/van-gogh/cafe_terrace_at_night.jpg'
-                    }
-                },
-                {
-                    artistName: "Andy Warhol",
-                    dataName: 'andy-warhol',
-                    painting: {
-                        title: "Campbell's Soup Cans",
-                        date: '1962',
-                        url: 'images/andy-warhol/campbells-soup.png'
-                    }
-                },
-            ]
+    const createMessage = (text) => {
+        const message = document.createElement('div');
+        // message.innerText = 'Correct!';
+        message.innerText = text;
+        message.className = 'feedback__success-message';
+        body.append(message);
     }
 
-    return data;
+    if (type === 'success') {
+        const message = document.createElement('div');
+        message.innerText = 'Correct!';
+        body.append(message);
+        // Call the function lol
+    } else if (type === 'incorrect') {
+
+    }
 }
 
 class Painting {
     constructor(artistData, imgElement, imageUrl) {
-
-        // console.log('artistData:', artistData);
-
         this.artistDataName = artistData.dataName;
         this.imgElement = imgElement;
         this.imageUrl = imageUrl;
@@ -84,7 +49,7 @@ class Painting {
         imgElement.addEventListener(
             'click',
             () => {
-                if (this.artistDataName === data.correctArtist.dataName) {
+                if (this.artistDataName === correctArtistDataName) {
                     console.log("Correct artist clicked! :)")
                 } else {
                     console.log("Incorrect artist clicked! :(");
@@ -95,89 +60,39 @@ class Painting {
 
     setPageText(artistData) {
         const caption = this.imgElement.nextElementSibling;
-        caption.querySelector('[data-caption-section="title"]').innerHTML = artistData.painting.title;
+        caption.querySelector('[data-caption-section="title"]').innerText = artistData.painting.title;
         caption.querySelector('[data-caption-section="artist"]').innerHTML = artistData.artistName;
         caption.querySelector('[data-caption-section="date"]').innerHTML = artistData.painting.date;
-
-        // const title = caption.querySelector('[data-caption-section="title"]');
-        // console.log(title); 
     }
-
-    // getImageUrl() {
-    //     return "image_url.jpg";
-    // }
 }
 
-const artistNames = [
-    'pablo-picasso',
-    'van-gogh',
-    'andy-warhol',
-    'da-vinci'
-];
+// Wrapped in a asynchronous 'self-executing anonymous function', 
+// because it uses the data Fetched from the backend.  
+(async () => {
+    const randomNumber = Math.floor(Math.random() * numberOfPaintings);
+    const paintingElements = document.querySelectorAll('#paintings img');
+    const data = await fetchData(correctArtistDataName);
 
-const paintingElements = document.querySelectorAll('#paintings img');
+    // Initialise a counter for the 'incorrect' paintings
+    let j = 0;
 
-// console.log(paintingElements);
-// for (const paintingElement of paintingElements) {
-//     // console.log(paintingElement.src);
-// }
-// console.log(paintingElements);
-
-const randomNumber = Math.floor(Math.random() * numberOfPaintings);
-
-// console.log("fetchData():", fetchData());
-
-const data = fetchData(correctArtistDataName);
-
-console.log('data.incorrectArtists:', data.incorrectArtists)
-
-let j = 0;
-
-// For each painting on the page 
-for (let i = 0; i < numberOfPaintings; i++) {
-    // console.log(i);
-    // Counter to cycle through the incorrect artists
-
-    // console.log(paintingElements[i]);
-    paintingElements[i].setAttribute('src', '#')
-
-    if (i === randomNumber) {
-        const paintingObj = new Painting(
-            // correctArtistDataName,
-            data.correctArtist,
-            paintingElements[i],
-            data.correctArtist.painting.url,
-
-        )
-        // console.log("Correct painting obj:", paintingObj);
-    } else {
-        const paintingObj = new Painting(
-            data.incorrectArtists[j],
-            paintingElements[i],
-            data.incorrectArtists[j].painting.url,
-        )
-        // console.log("Incorrect painting obj:", paintingObj);
-        // console.log("data.incorrectArtist[j]", data.incorrectArtists[j]);
-        // Increment that counter yo
-        j++;
-        console.log('j:', j);
+    // For each painting on the page 
+    for (let i = 0; i < numberOfPaintings; i++) {
+        if (i === randomNumber) {
+            new Painting(
+                data.correctArtist,
+                paintingElements[i],
+                data.correctArtist.painting.url,
+            )
+        } else {
+            new Painting(
+                data.incorrectArtists[j],
+                paintingElements[i],
+                data.incorrectArtists[j].painting.url,
+            )
+            // Increment the counter to cycle through the 'incorrect' paintings
+            j++;
+            console.log('j:', j);
+        }
     }
-
-
-
-    // const paintingObj = new Painting()
-
-    // console.log(paintingElements[i]);
-
-
-}
-    // const data = fetchData();
-    // console.log(data[i]);
-
-    // Make a painting for the correct artist
-
-    // Make paintings for the incorrect artists (x3)
-
-    // Randomise the array 
-
-
+})();
