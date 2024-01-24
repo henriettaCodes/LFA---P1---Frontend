@@ -1,0 +1,86 @@
+body {
+    color: #576088;
+    font-family: 'Londrina Solid', sans-serif;
+    background-color: #F6F6FF;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+
+  } 
+
+main {
+   /* max-width: 800px; */
+   margin: 3rem;
+  }
+
+
+ h1 {
+    color: #7076D0;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    margin-left: 33%;
+ }
+
+ .image-container {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+ .leaderboard_bg {
+    width: 300px;
+    height: 411px;
+    background-color: #DAF0FE; 
+    border-radius: 7%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 20px;
+ }
+
+ .achievements_bg {
+    width: 750px;
+    height: 411px;
+    background-color: #DAF0FE; 
+    border-radius: 7%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+ }
+
+
+.achievements_imgs_container {
+    display: flex;
+ }
+
+.A1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.rectangle_bg {
+    width: 135px;
+    height: 200px;
+    border-radius: 5%;
+    background-color: #86CAF2;
+    position: absolute;
+    top: 32%;
+    left: 33rem
+
+}
+
+.start-btn {
+    position: absolute;
+    bottom: 0.5%;
+    left: 40%;
+
+}
+
