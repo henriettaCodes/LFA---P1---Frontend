@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
         rel="stylesheet">
 
-    <!-- <script src="js/artistBioPage.js" defer></script> -->
+    <script src="js/paintingRecognition.js" defer ></script>
 </head>
 
 <body>
@@ -40,35 +40,39 @@
             </p>
         </hgroup>
 
-        <div class="painting-recognition-page__paintings-image-container">
+        <div id="paintings" class="painting-recognition-page__paintings-image-container">
             <div>
                 <img src="images/picasso/girl_before_a_mirror.jpg" alt="Girl before a Mirror (1932) by Pablo Picasso">
                 <div class="painting-recognition-page__painting-caption">
-                    <span class="painting-recognition-page__painting-caption-title">Girl before a Mirror</span>
-                    <span class="painting-recognition-page__painting-caption-date">1932</span>
+                    <span data-caption-section="title" class="painting-recognition-page__painting-caption-title">Girl before a Mirror</span>
+                    <span data-caption-section="artist" class="painting-recognition-page__painting-caption-artist">Pablo Picasso</span>
+                    <span data-caption-section="date" class="painting-recognition-page__painting-caption-date">1932</span>
                 </div>
                 </span>
             </div>
             <div>
                 <img src="images/da-vinci/last_supper.jpg" alt="The Last Supper (1495–1498) by Leonardo Da Vinci">
                 <div class="painting-recognition-page__painting-caption">
-                    <span class="painting-recognition-page__painting-caption-title">The Last Supper</span>
-                    <span class="painting-recognition-page__painting-caption-date">1495–1498</span>
+                    <span  data-caption-section="title" class="painting-recognition-page__painting-caption-title">The Last Supper</span>
+                    <span  data-caption-section="artist" class="painting-recognition-page__painting-caption-artist">Leonardo Da Vinci</span>
+                    <span  data-caption-section="date" class="painting-recognition-page__painting-caption-date">1495–1498</span>
                 </div>
             </div>
             <div>
                 <img src="images/van-gogh/cafe_terrace_at_night.jpg"
                     alt="Cafe Terrace at Night (1888) by Vincent Van Gogh">
                 <div class="painting-recognition-page__painting-caption">
-                    <span class="painting-recognition-page__painting-caption-title">Café Terrace at Night</span>
-                    <span class="painting-recognition-page__painting-caption-date">1888</span>
+                    <span data-caption-section="title" class="painting-recognition-page__painting-caption-title">Café Terrace at Night</span>
+                    <span  data-caption-section="artist" class="painting-recognition-page__painting-caption-artist">Vincent Van Gogh</span>
+                    <span  data-caption-section="date" class="painting-recognition-page__painting-caption-date">1888</span>
                 </div>
             </div>
             <div>
                 <img src="images/andy-warhol/campbells-soup.png" alt="Campbell's Soup Cans (1962) by Andy Warhol">
                 <div class="painting-recognition-page__painting-caption">
-                    <span class="painting-recognition-page__painting-caption-title">Cambpell's Soup Cans</span>
-                    <span class="painting-recognition-page__painting-caption-date">1962</span>
+                    <span  data-caption-section="title" class="painting-recognition-page__painting-caption-title">Cambpell's Soup Cans</span>
+                    <span  data-caption-section="artist" class="painting-recognition-page__painting-caption-artist">Andy Warhol</span>
+                    <span  data-caption-section="date" class="painting-recognition-page__painting-caption-date">1962</span>
                 </div>
             </div>
         </div>
