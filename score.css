@@ -22,20 +22,48 @@ body {
     transform: rotate(-2deg);
   }
 
-  .circle {
-    width: 200px;
-    height: 200px;
-    background-color: #FFCE51; 
-    border-radius: 50%;
+  body {
     display: flex;
-    align-items:center;
     justify-content: center;
+    align-items: center;
+    height: 95vh;
+    
+  }
+  
+  .circle-one {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    background-color: rgba(255, 206, 81, 0.19);
+  
+  
+  }
+  
+  .circle-two {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background-color: rgba(255, 206, 81, 0.19);
+  }
+  
+  .circle-three {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #FFCE51;
+  }
+  
+  
+  .circle-one, .circle-two, .circle-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   span {
     color: #00A9F2;
     font-family: Inter;
-    font-size: 85px;
+    font-size: 55px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -101,3 +129,4 @@ body {
 .layout__next-button:hover svg {
   fill: #E2B22F;
 }
+
