@@ -39,8 +39,12 @@ p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  font-size: 22px;
+  margin: auto;
+  width: 65%;
+  /* padding-left: 4rem;
+  padding-right: 4rem; */
+  padding-bottom: 1.5rem;
 }
 
 ol {
@@ -94,8 +98,8 @@ ol {
   align-items: center;
   justify-content: center;
   /* margin-left: 10%; */
-  margin-left: 12rem;
-  margin-right: 2.5rem;
+  margin-left: 14rem;
+  margin-right: 1rem;
 }
 
 .achievements_grid {
@@ -108,7 +112,7 @@ ol {
 .achievements_grid img {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Optional: add border-radius for a nicer look */
+  border-radius: 8px; 
 }
 
 .achievements_bg {
@@ -124,6 +128,7 @@ ol {
 .start-btn {
   position: absolute;
   bottom: 1rem;
+  margin-bottom: -1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
