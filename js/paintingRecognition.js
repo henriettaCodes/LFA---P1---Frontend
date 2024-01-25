@@ -106,6 +106,7 @@ let chosen = false;
     const randomNumber = Math.floor(Math.random() * numberOfPaintings);
     const paintingElements = document.querySelectorAll('#paintings img');
     const data = await fetchData(correctArtistDataName);
+    document.querySelector('#painting-recognition-page__heading').innerHTML = `Which painting is by <span class="painting-recognition-page__heading-artist-name">${data.correctArtist.artistName}</span>?`;
 
     // Initialise a counter for the 'incorrect' paintings
     let j = 0;
