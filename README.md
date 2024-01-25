@@ -1,13 +1,13 @@
 #The Exceptional's Art Recognition game
 
 ##Description
-An art recognition game aimed at children ages 14+ to test their knowledge on famous artists!
+An art recognition game aimed at children ages 14+ to test their knowledge on famous artists! Access the project here: https://henriettacodes.github.io/LFA---P1---Frontend/
 
 ##Installation & Usage
 -Clone or download the project from the repo here: 
 git@github.com:henriettaCodes/LFA---P1---Frontend.git
 Open the project and right click on index.html → Open in live server. This will display the front end of the webpage.
-Backend: ?
+Backend: (TBD)
 
 ##Technologies 
 -Html
@@ -29,7 +29,7 @@ Wins:
 -The game logic which identifies the correct image that has been selected, resulting in a playable game.
 -Translating the Figma UI into code as closely as we could. 
 Challenges:
-?
+(TBD)
 
 ##Future features:
 -All the artists in the JSON data useable for the game 
