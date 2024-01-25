@@ -54,6 +54,13 @@ class Painting {
                 } else {
                     console.log("Incorrect artist clicked! :(");
                 }
+
+                // Reveal the captions underneath each painting
+                Array.from(document.getElementsByClassName('painting-recognition-page__painting-caption')).forEach(
+                    element => {
+                        element.style['display'] = 'block';
+                    }
+                );
             }
         )
     }

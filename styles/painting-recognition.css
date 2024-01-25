@@ -71,6 +71,9 @@ img {
     gap: 0.5rem;
     margin-top: 0.5rem;
     text-align: center;
+
+    /* Hidden by default -- until the player chooses the correct/incorrect painting! */
+    display: none;
 }
 
 .painting-recognition-page__painting-caption-title {
