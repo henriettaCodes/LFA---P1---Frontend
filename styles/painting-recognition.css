@@ -23,17 +23,9 @@ img {
     gap: 3rem;
 }
 
-.painting-recognition-page__heading-group h1,
-.painting-recognition-page__heading-group p {
-    margin: 0;
-}
-
 .painting-recognition-page__heading-group h1 {
+    margin: 0;
     font-size: 3rem;
-}
-
-.painting-recognition-page__heading-group {
-    font-size: 2rem;
 }
 
 .painting-recognition-page__heading-artist-name {
