@@ -81,6 +81,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: justify;
 }
 
 .artist-bio-page__bio-text-container p {
