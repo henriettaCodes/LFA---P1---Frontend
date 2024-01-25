@@ -6,6 +6,9 @@ const correctArtistDataName = queryParams.get('artist');  // Example: `website.c
 
 const endpointUrl = `https://lfa-project1-backend.onrender.com/painting-recognition?artist=${correctArtistDataName}`;
 
+// Holds state: has the player chosen a painting yet?
+let chosen = false;
+
 // Gets the the data for all the images from the backend.
 // Data returned must include one painting for the correct artist,
 // and three incorrect paintings from three other artists. 
@@ -14,25 +17,29 @@ const fetchData = async () => {
     return await response.json();
 }
 
-const displayMessage = (type) => {
-    const body = document.querySelector('body');
+const displayMessage = ({ success }) => {
+    // const body = document.querySelector('body');
 
-    const createMessage = (text) => {
+    const createMessage = ({ success, text }) => {
+        // console.log(text);
+
         const message = document.createElement('div');
         // message.innerText = 'Correct!';
         message.innerText = text;
-        message.className = 'feedback__success-message';
-        body.append(message);
+        message.className = success ? 'feedback__message feedback__message--success' : 'feedback__message feedback__message--failure';
+        document.getElementById('feedback__success-message-container').append(message);
     }
 
-    if (type === 'success') {
-        const message = document.createElement('div');
-        message.innerText = 'Correct!';
-        body.append(message);
-        // Call the function lol
-    } else if (type === 'incorrect') {
+    // console.log(success);
 
-    }
+    if (success) createMessage({
+        success: true,
+        text: "Correct!"
+    });
+    else createMessage({
+        success: false,
+        text: "Incorrect!"
+    });
 }
 
 class Painting {
@@ -49,10 +56,19 @@ class Painting {
         imgElement.addEventListener(
             'click',
             () => {
-                if (this.artistDataName === correctArtistDataName) {
-                    console.log("Correct artist clicked! :)")
-                } else {
-                    console.log("Incorrect artist clicked! :(");
+                // Player can only choose a painting once! 
+                if (!chosen) {
+                    if (this.artistDataName === correctArtistDataName) {
+                        // console.log("Correct artist clicked! :)");
+                        // console.log('chosen:', chosen)
+                        displayMessage({ success: true });
+                        chosen = true;
+                    } else {
+                        // console.log('chosen:', chosen)
+                        // console.log("Incorrect artist clicked! :(");
+                        displayMessage({ success: false });
+                        chosen = true;
+                    }
                 }
 
                 // Reveal the captions underneath each painting
@@ -102,7 +118,7 @@ class Painting {
             )
             // Increment the counter to cycle through the 'incorrect' paintings
             j++;
-            console.log('j:', j);
+            // console.log('j:', j);
         }
     }
 })();

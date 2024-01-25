@@ -91,3 +91,28 @@ img {
     /* Hide the 'Next' navigation button until the player clicks a painting */
     display: none;
 }
+
+.feedback__success-message-container {
+    position: fixed;
+    /* width: 100vw;
+    height: 100vh; */
+    /* z-index: 100; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback__message {
+    background-color: aliceblue;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+}
+
+.feedback__message--success {
+    color: green;
+}
+
+.feedback__message--failure {
+    color: red;
+}
