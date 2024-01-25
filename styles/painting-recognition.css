@@ -31,6 +31,7 @@ img {
 .painting-recognition-page__heading-group h1 {
     font-size: 3rem;
 }
+
 .painting-recognition-page__heading-group {
     font-size: 2rem;
 }
@@ -43,7 +44,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    text-align: center; 
+    text-align: center;
 }
 
 .painting-recognition-page__paintings-image-container {
@@ -84,4 +85,9 @@ img {
 
 .painting-recognition-page__painting-caption-date {
     font-weight: 300;
+}
+
+.layout__next-button {
+    /* Hide the 'Next' navigation button until the player clicks a painting */
+    display: none;
 }

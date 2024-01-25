@@ -61,6 +61,9 @@ class Painting {
                         element.style['display'] = 'block';
                     }
                 );
+
+                // Show the 'Next' navigation button 
+                document.querySelector('.layout__next-button').style['display'] = 'block';
             }
         )
     }
