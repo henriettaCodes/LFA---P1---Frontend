@@ -1,6 +1,10 @@
 # The Exceptional's Art Recognition game
 
+<<<<<<< HEAD
 ## Description
+=======
+##Description
+>>>>>>> 305d50447caae3d3edfcdcff74fa6f0900e77cb5
 An art recognition game aimed at children ages 14+ to test their knowledge on famous artists! Access the project here: https://henriettacodes.github.io/LFA---P1---Frontend/
 
 This project was created following a brief we were provided as a team, where we had a problem statement to address. A secondary school has faced a problem where they noticed a lack of engagement in non-STEM subjects over the last two years and need a solution on how they can overcome this. What we were tasked with was to come up with a solution that places student enjoyment at the heart of the learning experience. When looking at a list of subjects taught in secondary schools, as a group we decided art/art history was the one we had the most interest and appreciation for where we could create a viable solution for the school to overcome the issue of lack of engagement. 
