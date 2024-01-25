@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
         rel="stylesheet">
+
+    <script src="js/artistBio.js" defer></script>
 </head>
 
 <body>
@@ -30,60 +32,45 @@
 
         <hgroup class="artist-bio-page__heading-group">
             <div class="artist-bio-page__heading-slant-box">
-                <h1>Pablo Picasso</h1>
+                <h1 id="artist-bio-page__artist-name">Loading...</h1>
             </div>
             <div class="artist-bio-page__year-info-slant-box">
-                <p>Born 1881 | Died 1973</p>
+                <p id="artist-bio-page__artist-birth-death-years">Loading...</p>
             </div>
         </hgroup>
 
         <div class="artist-bio-page__main-bio-container">
 
             <div class="artist-bio-page__bio-portrait">
-                <img src="/images/picasso/picasso_portrait.webp" alt="Photograph of Pablo Picasso">
+                <img id="artist-bio-page__bio-portrait" src="/images/placeholder/placeholder01.webp"
+                    alt="Loading...">
             </div>
-            <div class="artist-bio-page__bio-text-container">
-                <p>
-                    Pablo Picasso, born on October 25, 1881, in Málaga, Spain, was a highly influential artist known for
-                    his versatile and pioneering contributions to art in the 20th century.
-                </p>
-                <p>
-                    He co-founded the Cubist movement, was instrumental in the invention of constructed sculpture, and
-                    made
-                    significant contributions to Symbolism and Surrealism.
-                </p>
-                <p>
-                    His prolific output included over 20,000 paintings, prints, drawings, sculptures, ceramics, theater
-                    sets, and costumes.
-                </p>
-                <p>
-                    Picasso's revolutionary artistic accomplishments brought him universal renown and immense fortune
-                    throughout his life, making him one of the best-known figures in 20th-century art.
-                </p>
+            <div id="artist-bio-page-bio-text-container" class="artist-bio-page__bio-text-container">
+                Loading...
             </div>
         </div>
 
-        <div class="artist-bio-page__paintings-image-container">
+        <div id="artist-bio-page__paintings-image-container" class="artist-bio-page__paintings-image-container">
             <div>
-                <img src="images/picasso/demoiselles.jpg" alt="Les Demoiselles d'Avignon (1907) by Pablo Picasso">
+                <img src="images/placeholder/placeholder01.webp" alt="Loading...">
                 <div class="artist-bio-page__painting-caption">
-                    <span class="artist-bio-page__painting-caption-title">Les Demoiselles d'Avignon</span>
-                    <span class="artist-bio-page__painting-caption-date">1907</span>
+                    <span data-caption-section="title" class="artist-bio-page__painting-caption-title">Loading...</span>
+                    <span data-caption-section="date" class="artist-bio-page__painting-caption-date">Loading...</span>
                 </div>
                 </span>
             </div>
             <div>
-                <img src="images/picasso/guernica.webp" alt="Guernica (1937) by Pablo Picasso">
+                <img src="images/placeholder/placeholder01.webp" alt="Loading...">
                 <div class="artist-bio-page__painting-caption">
-                    <span class="artist-bio-page__painting-caption-title">Guernica</span>
-                    <span class="artist-bio-page__painting-caption-date">1937</span>
+                    <span data-caption-section="title" class="artist-bio-page__painting-caption-title">Loading...</span>
+                    <span data-caption-section="date" class="artist-bio-page__painting-caption-date">Loading...</span>
                 </div>
             </div>
             <div>
-                <img src="images/picasso/weeping_woman.jpg" alt="The Weeping Woman (1937) by Pablo Picasso">
+                <img src="images/placeholder/placeholder01.webp" alt="Loading...">
                 <div class="artist-bio-page__painting-caption">
-                    <span class="artist-bio-page__painting-caption-title">The Weeping Woman</span>
-                    <span class="artist-bio-page__painting-caption-date">1937</span>
+                    <span data-caption-section="title" class="artist-bio-page__painting-caption-title">Loading...</span>
+                    <span data-caption-section="date" class="artist-bio-page__painting-caption-date">Loading...</span>
                 </div>
             </div>
         </div>
