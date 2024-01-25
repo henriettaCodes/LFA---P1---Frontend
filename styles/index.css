@@ -55,12 +55,20 @@ ol {
 .notification-icon {
   position: absolute;
   top: 4rem;
-  right: 10rem;
+  right: 7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .bell-icon {
   width: 40px;
   height: 40px;
+}
+
+.User-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .leaderboard_bg {
