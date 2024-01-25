@@ -56,6 +56,9 @@ class Painting {
         imgElement.addEventListener(
             'click',
             () => {
+
+                const paintingsDiv = document.getElementById('paintings');
+
                 // Player can only choose a painting once! 
                 if (!chosen) {
                     if (this.artistDataName === correctArtistDataName) {
@@ -63,11 +66,19 @@ class Painting {
                         // console.log('chosen:', chosen)
                         displayMessage({ success: true });
                         chosen = true;
+
+                        // Remove interactivity styling for paintings,
+                        // as they can no longer be interacted with
+                        paintingsDiv.classList.remove('painting-recognition-page__paintings-image-container--not-yet-chosen');
                     } else {
                         // console.log('chosen:', chosen)
                         // console.log("Incorrect artist clicked! :(");
                         displayMessage({ success: false });
                         chosen = true;
+
+                        // Remove interactivity styling for paintings,
+                        // as they can no longer be interacted with
+                        paintingsDiv.classList.remove('painting-recognition-page__paintings-image-container--not-yet-chosen');
                     }
                 }
 

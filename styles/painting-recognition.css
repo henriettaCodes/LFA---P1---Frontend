@@ -61,7 +61,7 @@ img {
     cursor: pointer;
 }
 
-.painting-recognition-page__paintings-image-container img:hover {
+.painting-recognition-page__paintings-image-container--not-yet-chosen img:hover {
     /* border: 1rem solid #E2B22F; */
     border: 1rem ridge #E2B22F;
 }
