@@ -34,8 +34,9 @@ class Painting {
             // Show the captions for each paining, before the next round starts
             showCaptions();
 
-            // Show the 'Next' navigation button 
-            document.querySelector('.layout__next-button').style['display'] = 'flex';
+            // Show the 'Next' button, 
+            // so the player can progress to the next round or go the Score page 
+            showNextButton();
         }
     }
 
@@ -92,6 +93,16 @@ const hideCaptions = () => {
     );
 }
 
+// Show the 'Next' navigation button
+const showNextButton = () => {
+    nextButton.style['display'] = 'flex';
+}
+
+// Hide the 'Next' navigation button 
+const hideNextButton = () => {
+    nextButton.style['display'] = 'none';
+}
+
 const displayMessage = ({ success }) => {
 
     // Internal helper function 
@@ -146,40 +157,6 @@ const game = async () => {
     }
 }
 
-// The 'Next' button starts the next round, 
-// or takes the player to the Score page when all rounds have been played 
-document.querySelector('#layout__next-button').addEventListener(
-    'click',
-    () => {
-        if (round >= 1 && round < numberOfRounds) {
-            // Next round! 
-            round++;
-
-            // Destroy the "Correct!"/"Incorrect" feedback message 
-            document.querySelector('#feedback_message').remove();
-
-            // Add the interactivity styling to the painting frames again 
-            paintingsDiv.classList.add('painting-recognition-page__paintings-image-container--not-yet-chosen');
-
-            // Hide the captions underneath each painting 
-            hideCaptions();
-
-            // Important to prevent bugs in game logic
-            paintingObjects.forEach(painting => painting.removeClickHandler());
-
-            // Empty the array of `Painting` objects for garabage collection
-            paintingObjects.length = 0;
-
-            // Start a new game
-            game();
-        } else {
-            // The game is finished! 
-            // Take the player to the Score page
-            window.location.href = 'score.html';
-        }
-    }
-)
-
 
 /* 
     Get the artist 'data name' from the URL query string 
@@ -204,9 +181,47 @@ const roundNumberDisplay = document.querySelector('#painting-recognition-page__r
 const paintingsDiv = document.getElementById('paintings');
 const paintingElements = document.querySelectorAll('#paintings img');
 const captions = Array.from(document.getElementsByClassName('painting-recognition-page__painting-caption'));
+const nextButton = document.querySelector('#layout__next-button');
 
 let chosen = false;  // Holds state: has the player chosen a painting yet?
 let round = 1;
+
+// The 'Next' button starts the next round, 
+// or takes the player to the Score page when all rounds have been played 
+nextButton.addEventListener(
+    'click',
+    () => {
+        if (round >= 1 && round < numberOfRounds) {
+            // Next round! 
+            round++;
+
+            // Destroy the "Correct!"/"Incorrect" feedback message 
+            document.querySelector('#feedback_message').remove();
+
+            // Add the interactivity styling to the painting frames again 
+            paintingsDiv.classList.add('painting-recognition-page__paintings-image-container--not-yet-chosen');
+
+            // Hide the captions underneath each painting 
+            hideCaptions();
+
+            // Hide the 'Next' button until the player has chosen a painting
+            hideNextButton();
+
+            // Important to prevent bugs in game logic
+            paintingObjects.forEach(painting => painting.removeClickHandler());
+
+            // Empty the array of `Painting` objects for garabage collection
+            paintingObjects.length = 0;
+
+            // Start a new game
+            game();
+        } else {
+            // The game is finished! 
+            // Take the player to the Score page
+            window.location.href = 'score.html';
+        }
+    }
+)
 
 // Start the first game!
 game();

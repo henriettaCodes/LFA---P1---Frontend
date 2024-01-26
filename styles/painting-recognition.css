@@ -87,6 +87,16 @@ img {
 }
 
 .layout__next-button {
+    /* 
+        On the Painting Recognition page this button is a `<button>`, 
+        because it triggers applications logic; 
+        On other pages it is an `<a>`, so we need to add further styles here. 
+    */
+    font-family: 'Londrina Solid', sans-serif;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
     /* Hide the 'Next' navigation button until the player clicks a painting */
     display: none;
 }
