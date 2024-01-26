@@ -62,11 +62,24 @@ body {
 
   span {
     color: #00A9F2;
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    top: 3 rem;
+    top: 3rem;
 
+  }
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 3rem;
+}
+
+  .score-page__score-display {
+    display: block;
+    color: #E1229A;
+    font-size: 4.5rem;
   }
