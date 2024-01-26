@@ -28,6 +28,10 @@ img {
     font-size: 3rem;
 }
 
+.painting-recognition-page__heading-group p {
+    font-size: 2rem;
+}
+
 .painting-recognition-page__heading-artist-name {
     color: #E1229A;
 }
