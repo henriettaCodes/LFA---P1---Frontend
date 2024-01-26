@@ -71,8 +71,13 @@ const fetchData = async (round) => {
     return await response.json();
 }
 
-const incrementScore = () => {
+const resetScore = () => {
+    localStorage.setItem('score', 0);
+}
 
+const incrementScore = () => {
+    let score = localStorage.getItem('score') ? Number(localStorage.getItem('score')) : 0;
+    localStorage.setItem('score', score + 1);
 }
 
 // Reveal the captions underneath each painting
@@ -222,6 +227,9 @@ nextButton.addEventListener(
         }
     }
 )
+
+// Make sure the score counter is at 0 before the game starts
+resetScore();
 
 // Start the first game!
 game();
