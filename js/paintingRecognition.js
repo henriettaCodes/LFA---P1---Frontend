@@ -65,7 +65,7 @@ const fetchData = async (round) => {
     // DEVELOPMENT BACKEND ENDPOINT:
     // const endpointUrl = `http://localhost:3000/painting-recognition?artist=${correctArtistDataName}&round=${round}`;
     // PRODUCTION BACKEND ENDPOINT:
-    const endpointUrl = `https://lfa-project1-backend.onrender.com/painting-recognition?artist=${correctArtistDataName}`;
+    const endpointUrl = `https://lfa-project1-backend.onrender.com/painting-recognition?artist=${correctArtistDataName}&round=${round}`;
 
     const response = await fetch(endpointUrl);
     return await response.json();
