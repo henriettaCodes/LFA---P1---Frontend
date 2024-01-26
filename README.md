@@ -9,14 +9,17 @@ This project was created following a brief we were provided as a team, where we 
 ## Installation & Usage
 * Clone the project from the repo here: 
 git@github.com:henriettaCodes/LFA---P1---Frontend.git
-* Open the project and right click on index.html → Open in live server. This will display the front end of the webpage.
-
-### Backend: (TBD)
+* Open the project and right click on index.html → Open in live server. This will display the front end of the webpage. Ho
 
 ## Technologies 
+* git
+* GitHub
 * Html
 * CSS
 * Javascript
+* Figma
+* FigJam
+* Coolors
 
 ## Process
 * Deciding the subject of the game and what the pupil will take from it, ensuring this is reflected on the requirements from the brief.
@@ -25,19 +28,24 @@ git@github.com:henriettaCodes/LFA---P1---Frontend.git
 * Low/Hi-fidelity mockups.
 * Creating webpages in HTML/CSS.
 * Creation of backend using Express.js, linking it with the front-end.
+* Deployment of the project using github pages & render
 
 ## Wins & Challenges 
 ### Wins:
 * Executing the game logic which identifies the correct image that the user selects, resulting in a playable and working game.
 * Translating the Figma UI into static HTML/CSS web pages. 
+* Deployment of our functional game.
 
 ### Challenges:
-* (TBD)
+* The backend server needed to be 'spun up' in order to operate as efficiently as we planned. This was remedied by adding a fetch request on the dashboard page to 'wake up' the backend server.
 
 ## Future features:
 * All the artists in the JSON data useable for the game.
-* Social aspects were considered by including a working leaderboard, as well as the users ranking within that leaderboard.
-* Logic to implement real achievements for the game.
+* Logic for working achievements in the game.
+* A database enabling working user-profiles, score-system & social leader-board.
+* Adaptive UI themes for the application, starting with dark-mode.
+* Additional game modes.
+* A dashboard for teachers to add further artists + tests. As well as letting them know how the students are performing.
 
 ## Credits and Acknowledgements:
 * Alex Hort-Francis: (Github: https://github.com/hortfrancis)
